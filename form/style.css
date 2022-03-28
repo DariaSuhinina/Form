@@ -1,0 +1,161 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --apricot-peach: #fbceb5;
+}
+body {
+  background: url(./background.webp);
+  background-size: cover;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  opacity: .3;
+  z-index: -1;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  width: 400px;
+  margin: 170px auto;
+}
+
+h1 {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+#acc {
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+input {
+  display: block;
+}
+
+.text {
+  border: 1px solid transparent;
+  width: 400px;
+  border-radius: 90px;
+  line-height: 50px;
+  margin-top: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .1);
+  /* opacity: .1; */
+  font-size: 16px;
+  color: var(--white);
+  outline: none;
+  transition: 0.5s all ease;
+}
+
+.text::placeholder {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.text:focus {
+  border: 1px solid var(--white);
+  background: none;
+  opacity: .9;
+}
+
+#sign {
+  min-width: 400px;
+  border-radius: 90px;
+  background-color: var(--apricot-peach);
+  /* opacity: .7; */
+  line-height: 50px;
+  margin-top: 15px;
+  padding-left: 10px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+#remember {
+  -webkit-appearance: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.check {
+  width: 15px;
+  border: transparent solid 1px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: var(--apricot-peach);
+  opacity: .1;
+  position: absolute;
+  margin-left: -30px;
+  background-image: none;
+  transition: 0.3s all ease-in;
+  
+}
+
+#remember:checked + .check {
+  background-image: url(./icon.svg);
+  background-color: var(--apricot-peach);
+  opacity: 1;
+}
+
+#forgot {
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+#or {
+  font-size: 16px;
+  text-align: center;
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  display: block;
+  width: 190px;
+  line-height: 50px;
+  border: none;
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
